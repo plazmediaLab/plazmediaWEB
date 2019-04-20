@@ -1,0 +1,46 @@
+/* Estilos principales de la pagina */
+body{
+    background: rgb(0, 0, 0,0.5);
+    margin: 0;
+    font-family: 'Open Sans';
+    color: white;
+}
+/* Estilos de presentación - secundarios */
+/* imagen banner - cabecera */
+.header::after{
+    content: " ";
+    height: 500px;
+    width: 100vw;
+    background-image: url(img/bannerWeb.jpg);
+    background-size: cover;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(4px);
+    transition: 500ms;
+}
+.header:hover::after{
+    filter: blur(0px);
+    -webkit-filter: blur(0px)
+}
+.header:hover .header-content{
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    transition: 500ms;    
+}
+/* contenedor imagen perfil - logo */
+.header-content{
+    position: absolute;
+    z-index: 1;
+}
+.conten-circle-logo{
+    width: 150px;
+    height: 150px; 
+    border-radius: 50%;
+    border: solid 1px;
+    border-color: #333333;
+}
+.logo{
+    display: block;
+    width: 100%;
+}
