@@ -1,17 +1,39 @@
 /* Estilos principales de la pagina */
 body{
-    background: rgb(0, 0, 0,0.5);
+    background: #0062fe;
     margin: 0;
-    font-family: 'Open Sans';
     color: white;
+    /* google fonts */
+    font-family: 'Open Sans';
+}
+/* contenedor de medida estandar para la pagina normalmente inactivo en el primer DIV */
+.contentStock{
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+    position: absolute;
+
+/* finciones y parametros de FLEXBOX - Investigar mas sobre el tema */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+}
+.medidaStandar{
+    width: 1000px;
+    height: 100%;
+    background-color:rgb(0, 0, 0,0.2);
+    z-index:4;
 }
 /* Estilos de presentación - secundarios */
 /* imagen banner - cabecera */
 .header::after{
-    content: " ";
-    height: 500px;
+    content: "";
+    height: 100vh;
     width: 100vw;
-    background-image: url(img/bannerWeb.jpg);
+    background-image: url(../img/bannerWeb.jpg);
     background-size: cover;
     display: block;
     background-repeat: no-repeat;
@@ -19,28 +41,92 @@ body{
     filter: blur(4px);
     transition: 500ms;
 }
-.header:hover::after{
+.header-content:hover, .header:hover::after{
     filter: blur(0px);
     -webkit-filter: blur(0px)
 }
-.header:hover .header-content{
+.header-content:hover {
     filter: blur(2px);
     -webkit-filter: blur(2px);
     transition: 500ms;    
 }
-/* contenedor imagen perfil - logo */
+/* contenedor logo y texto del banner */
 .header-content{
     position: absolute;
     z-index: 1;
+    top: 38%;
+    left: 40%;
+    width: 400px;
+    height: 300px;
+    text-align: right;
+    /* margin-top: 10%;;
+    margin-left: 5%; */
+    text-shadow: 0px 1px 3px #333333;
 }
+/* contenedor imagen perfil - logo */
 .conten-circle-logo{
     width: 150px;
     height: 150px; 
     border-radius: 50%;
     border: solid 1px;
     border-color: #333333;
+    position: relative;
+    margin: auto;
+    margin-right: 0;
+    position: absolute;
+    left: 430px;
 }
 .logo{
     display: block;
     width: 100%;
 }
+/* titulos y texto */
+.title{
+    font-family: 'Scada', sans-serif;
+    margin: 0;
+    padding: 20px 0px;
+}
+/* Diviciones en GRID */
+.grid-3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;     
+    grid-gap: 100px;
+}
+.grid-2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);    
+    grid-gap: 100px;
+}
+/* contenido de las secciones secundarias */
+.services{
+    padding: 3rem;
+}
+.about{
+    padding: 3rem;
+}
+.container{
+    width: 900px;
+    margin: auto;
+    overflow: hidden;
+}
+.text-center{
+    text-align: center;
+}
+/* colores de fnodo para las secciones */
+.gb-light{
+    background: white;
+    color: #333333;
+}
+.footer{
+    background: #333333;
+    color: white;
+    padding: 10px;
+    font-size: 9pt;
+}
+footer p{
+    margin: 0;
+}
+
+
+
+
