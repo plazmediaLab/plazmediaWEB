@@ -1,0 +1,9 @@
+$primary-color: red;
+$textAling: center;
+$valor: 10px;
+
+body{
+    color: $primary-color;
+    text-align: $textAling;
+    top: $valor; 
+}
