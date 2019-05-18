@@ -1,3 +1,4 @@
+/* Test inicial de Git */
 /* Estilos principales de la pagina */
 body{
     background: #0062fe;
@@ -41,7 +42,7 @@ body{
     filter: blur(4px);
     transition: 500ms;
 }
-.header-content:hover, .header:hover::after{
+header:hover::after{
     filter: blur(0px);
     -webkit-filter: blur(0px)
 }
@@ -54,13 +55,11 @@ body{
 .header-content{
     position: absolute;
     z-index: 1;
-    top: 38%;
-    left: 40%;
+    top: 60%;
+    left: 47rem;
     width: 400px;
     height: 300px;
-    text-align: right;
-    /* margin-top: 10%;;
-    margin-left: 5%; */
+    text-align: center;
     text-shadow: 0px 1px 3px #333333;
 }
 /* contenedor imagen perfil - logo */
@@ -70,11 +69,7 @@ body{
     border-radius: 50%;
     border: solid 1px;
     border-color: #333333;
-    position: relative;
     margin: auto;
-    margin-right: 0;
-    position: absolute;
-    left: 430px;
 }
 .logo{
     display: block;
